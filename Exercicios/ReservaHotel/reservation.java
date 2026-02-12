@@ -58,10 +58,10 @@ public class reservation{
                 break;
             }
             else{
-                System.out.println("Resposta inválida. Digite 's' para sim ou 'n' para não.");
+                throw new IllegalArgumentException("Resposta inválida. Digite 's' para Sim ou 'n' para Não.");
             }
+            sc.close();
         }
-        sc.close();
     }
 
 
@@ -76,7 +76,7 @@ public class reservation{
             System.out.print("Dias restantes: " + duration());
         }
         else{
-            System.out.println("Erro na reserva: A data de saída deve ser posterior à data de entrada.");
+            throw new IllegalArgumentException("Erro na reserva: A data de saída deve ser posterior à data de entrada.");
         }
     }
 
